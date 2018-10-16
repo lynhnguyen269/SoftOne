@@ -1,0 +1,13 @@
+{
+  "name": "masterHtml",
+  "description": "Master Gulp HTML",
+  "authors": [
+    "Phu Phan Thanh <phuptqn@gmail.com>"
+  ],
+  "version": "1.0.0",
+  "homepage": "www.phupt.com",
+  "dependencies": {
+    "jquery": "1.12.4",
+    "lodash": "^4.17.4"
+  }
+}

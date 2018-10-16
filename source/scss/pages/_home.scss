@@ -1,0 +1,113 @@
+/* -------------------->>> Home Page <<<-------------------- */
+.galery-wrappes {
+    @include flex-container;
+    padding-top: 100px;
+    padding-bottom: 95px;
+    &__left,
+    &__right {
+        display: flex;
+        width: 50%;
+    }
+    &__left {
+        &_image {
+            @include flex-center-colum;
+            width: $full-width;
+            @include background('../images/img-1101.jpg');
+            margin-right: 70px;
+            height: 483px;
+        }
+        &_box {
+            background-color: $box-bg;
+            padding: 40px 50px;
+            color: $text-theme-color;
+            text-align: center;
+            h3 {
+                font-size: 49.48px;
+                font-weight: $regular;
+                line-height: 51.76px;
+                letter-spacing: 2px;
+                margin: 0 0 25px;
+            }
+            .star {
+                margin-bottom: 30px;
+            }
+            p {
+                font-size: 29.69px;
+                font-weight: $light;
+                line-height: 1.2;
+                letter-spacing: 2px;
+                margin: 0;
+            }
+        }
+    }
+    &__right {
+        &_content {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            h3 {
+                font-size: 49.48px;
+                font-weight: $medium;
+                line-height: 51.76px;
+                text-transform: capitalize;
+                letter-spacing: 2px;
+                margin: 25px 0 40px;
+            }
+            p {
+                font-size: 29.69px;
+                font-weight: $light;
+                line-height: 1.2;
+                letter-spacing: 2px;
+                margin: 0 0 40px;
+            }
+            .list-image {
+                padding-top: 30px;
+                border-top: $border-width solid rgba(0, 0, 0, 0.62);
+                img {
+                    display: inline-block;
+                    float: left;
+                }
+            }
+        }
+    }
+}
+
+.background-image-wrappes {
+    @include flex-column-center;
+    @include background('../images/bg-12.jpg');
+    color: $text-theme-color;
+    height: 586px;
+    h3 {
+        font-size: 44.53px;
+        font-weight: $medium;
+        letter-spacing: 2px;
+        line-height: 1;
+        text-transform: uppercase;
+        margin: 0 0 20px 0;
+    }
+    p {
+        font-size: 29.69px;
+        font-weight: $regular;
+        letter-spacing: 2px;
+        margin: 0 0 35px 0;
+        &.stripe {
+            position: relative;
+            margin: 25px 0 0 0;
+            &:before,
+                &:after {
+                content: "";
+                position: absolute;
+                width: 80px;
+                height: 1px;
+                background-color: rgba(255, 255, 255, 0.75);
+                top: 50%;
+            }
+            &:before {
+                left: -110px;
+            }
+            &:after {
+                right: -110px;
+            }
+        }
+    }
+}

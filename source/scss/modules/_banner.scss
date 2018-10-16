@@ -1,0 +1,82 @@
+/* -------------------->>> Banner <<<-------------------- */
+.banner {
+    position: relative;
+    @include flex-column-center;
+    @include background('../images/banner.jpg');
+    background-size: cover;
+    height: 1031px;
+    color: $text-theme-color;
+    h1 {
+        font-size: 133.6px;
+        line-height: 97.7px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: $regular;
+        margin: 0 0 30px;
+        text-shadow: 0px 0px 8px rgba(149, 182, 212, 0.37)
+    }
+    p {
+        font-size: 34.64px;
+        line-height: 42px;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 8px rgba(149, 182, 212, 0.37);
+        letter-spacing: 2px;
+        margin-bottom: 60px;
+    }
+    .buttons {
+        @include flex-container;
+        &__left,
+        &__right {
+            position: relative;
+            @include flex-center-colum;
+            padding: 35px 40px 35px 30px;
+            color: $text-theme-color;
+            img {
+                z-index: 1;
+            }
+            p {
+                text-transform: capitalize;
+                font-size: 29.69px;
+                margin: 0 0 0 20px;
+                z-index: 1;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                transform: scaleX(0);
+                opacity: 0;
+                -webkit-transition: all 0.3s linear 0s;
+                -moz-transition: all 0.3s linear 0s;
+                -ms-transition: all 0.3s linear 0s;
+                -o-transition: all 0.3s linear 0s;
+                transition: all 0.3s linear 0s;
+            }
+            &:hover {
+                &:before {
+                    transform: scaleX(1);
+                    opacity: 1;
+                    z-index: 0;
+                }
+            }
+        }
+        &__left {
+            background-color: $button-style1;
+            &:before {
+                background-color: #197c5a;
+            }
+        }
+        &__right {
+            margin-left: 1px;
+            background-color: $button-style2;
+            &:before {
+                background-color: #609209;
+            }
+        }
+    }
+}

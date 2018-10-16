@@ -1,0 +1,55 @@
+/* -------------------->>> Header <<<-------------------- */
+header {
+    position: absolute;
+    top: 0;
+    width: $full-width;
+    background-color: $menu-bg;
+    color: $text-theme-color;
+    z-index: 9;
+    .nav-menu {
+        @include flex-center-colum;
+        ul {
+            @include flex-center-colum;
+            font-size: 34.64px;
+            line-height: 1.2;
+            text-transform: capitalize;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                position: relative;
+                letter-spacing: 2px;
+                font-weight: $light;
+                &:first-of-type {
+                    padding-right: 50px;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: calc(50% - 5.5px);
+                        right: -4.5px;
+                        @include background('../images/ellip-icon.png');
+                        width: 11px;
+                        height: 9px;
+                    }
+                }
+                &:last-of-type {
+                    padding-left: 50px;
+                }
+                @include linx ($text-theme-color, $text-link-hover, $text-link-hover, $text-link-hover)
+            }
+        }
+        .logo {
+            padding: 41px 20px;
+            border-top: 8px solid #fff;
+            margin: 0 75px;
+            @include linx ($text-theme-color, $text-link-hover, $text-link-hover, $text-link-hover)
+            a {
+                display: inline-block;
+                font-size: 39.58px;
+                line-height: 1.2;
+                letter-spacing: 2px;
+                margin: 0 0 30px;
+            }
+        }
+    }
+}

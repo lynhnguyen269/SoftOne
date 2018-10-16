@@ -1,0 +1,13 @@
+/* -------------------->>> Header <<<-------------------- */
+footer {
+    background-color: $footer-bg;
+    border-top: border solid #818181;
+    padding: 35px 0;
+    text-align: center;
+    p {
+        font-size: 22.27px;
+        line-height: 1;
+        color: $text-footer;
+        margin: 0;
+    }
+}

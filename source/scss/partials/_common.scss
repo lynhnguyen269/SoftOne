@@ -1,0 +1,46 @@
+.alignnone{margin:5px 20px 20px 0;}
+.aligncenter,div.aligncenter{display:block;margin:5px auto 5px auto;}
+.alignright{float:right;margin:5px 0 20px 20px;}
+.alignleft{float:left;margin:5px 20px 20px 0;}
+.aligncenter{display:block;margin:5px auto 5px auto;}
+a img.alignright{float:right;margin:5px 0 20px 20px;}
+a img.alignnone{margin:5px 20px 20px 0;}
+a img.alignleft{float:left;margin:5px 20px 20px 0;}
+a img.aligncenter{display:block;margin-left:auto;margin-right:auto;}
+
+/* -------------------->>> COMMON <<<-------------------- */
+html {
+    font-size: $global-font-size;
+}
+body{
+    background: $body-bg;
+    font-family: $base-font-family;
+    color: $text-color;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    width: $full-width;
+    max-width: $container-width;
+}
+
+p {
+    margin: 0 0 30px 0;
+}
+a {
+    text-decoration: none;
+    @include transition(0.4s)
+}
+b {
+    font-weight: bold;
+}
+.clear {
+    clear: both;
+}
+.flex-container {
+    @include flex-container;
+}

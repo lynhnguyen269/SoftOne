@@ -1,0 +1,175 @@
+$text-theme-color: #ffffff;
+$text-title-banner: #fdffff;
+$text-color: #7c7c7c;
+$text-title-color: #606060;
+$text-title-color-2: #676767;
+$text-link: #717171;
+$text-link-hover: #272727;
+$text-footer: rgba(111, 111, 111, 0.67);
+
+$menu-bg: rgba(1, 1, 1, 0.32);
+$button-style1: rgba(25, 124, 90, 0.71);
+$button-style2: rgba(96, 146, 9, 0.71);
+$box-bg: rgba(228, 203, 38, 0.95);
+$icon-bg: #d4e1e2;
+$icon-bg-hover: #92d64b;
+$body-bg: #fff;
+$footer-bg: #d8d0d0;
+
+$thin: 100;
+$extraLight: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$black: 900;
+
+$container-width: 1145px;
+$full-width: 100%;
+$border-width: 1px;
+
+$global-font-size: 27.21px;
+$global-line-height: 37.11px;
+$base-font-family: 'Raleway', Helvetica,Arial,sans-serif;
+$base-font-size: 29.69px;
+$base-line-height: 44.53px;
+$base-font-weight: $regular;
+
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+
+@mixin linx ($link, $visit, $hover, $active) {
+    a {
+        color: $link;
+        &:visited {
+            color: $visit;
+        }
+        &:hover {
+            color: $hover;   
+        }
+        &:active {
+            color: $active;
+        }
+    }
+}
+
+@mixin transform-style($style) {
+    transform-style: $style;
+    -moz-transform-style: $style;
+    -o-transform-style: $style;
+    -ms-transform-style: $style;
+    -webkit-transform-style: $style;
+}
+@mixin transition($time) {
+    transition: $time;
+    -webkit-transition: $time;
+    -moz-transition: $time;
+    -o-transition: $time;
+}
+
+@mixin flex-center-colum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-left-center-colum {
+    display: flex;
+    align-items: center;
+}
+@mixin flex-right-center-colum {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+@mixin flex-wrap-center-colum {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@mixin flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+@mixin flex-column-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin breakpoint($point){
+
+    @if ($point == lgmin){
+        @media (min-width: 1200px){ @content }
+    }
+
+    @if ($point == lg){
+        @media (min-width: 1200px) and (max-width: 1600px){ @content }
+    }
+
+    @if ($point == lgmax){
+        @media (max-width: 1920px){ @content }
+    }
+
+    @if ($point == lgmid){
+        @media (max-width: 1600px){ @content }
+    }
+
+    @if ($point == notobookmax){
+        @media (max-width: 1366px){ @content }
+    }
+
+    @else if ($point == md){
+        @media (min-width: 992px) and (max-width: 1199px){ @content }
+    }
+
+    @else if ($point == mdmin){
+        @media (min-width: 992px){ @content }
+    }
+
+    @else if ($point == mdmax){
+        @media (max-width: 1199px){ @content }
+    }
+
+    @else if ($point == sm){
+        @media (min-width: 768px) and (max-width: 991px){ @content }
+    }
+
+    @else if ($point == smmin){
+        @media (min-width: 768px){ @content }
+    }
+
+    @else if ($point == smmax){
+        @media (max-width: 991px){ @content }
+    }
+
+    @else if ($point == xs){
+        @media (max-width: 767px) and (min-width: 641px){ @content }
+    }
+
+    @else if ($point == xsmin){
+        @media (max-width: 767px){ @content }
+    }
+
+    @else if ($point == xxs){
+        @media (max-width: 640px) and (min-width: 481px){ @content }
+    }
+
+    @else if ($point == xxsmin){
+        @media (max-width: 640px){ @content }
+    }
+
+
+    @else if ($point == xxxs){
+        @media  (max-width: 480px){ @content }
+    }
+
+}

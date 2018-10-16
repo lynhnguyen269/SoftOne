@@ -1,0 +1,147 @@
+/* -------------------->>> Responsive <<<-------------------- */
+@include breakpoint(lgmin) {
+    .container {
+        width: $full-width;
+        max-width: $full-width;
+        padding-left: 72px;
+        padding-right: 72px;
+    }
+}
+
+@include breakpoint(lgmid) {
+    .container {
+        width: $full-width;
+        max-width: $full-width;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@include breakpoint(notobookmax) {
+    body{
+        font-size: 20px;
+        line-height: 1rem;
+    }
+    header {
+        .nav-menu {
+            ul {
+                font-size: 22px;
+                line-height: 1rem;
+            }
+            .logo {
+                padding: 21px 10px;
+                border-top: 4px solid #fff;
+                margin: 0 45px;
+                a {
+                    font-size: 24px;
+                    line-height: 1rem;
+                    margin: 0 0 15px;
+                }
+            }
+        }
+    }
+    .galery-wrappes {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        &__left {
+            &_image {
+                margin-right: 15px;
+                height: 338px;
+            }
+            &_box {
+                padding: 20px;
+                h3 {
+                    font-size: 20px;
+                    line-height: 1.2;
+                    margin: 0 0 15px;
+                }
+                .star {
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+        &__right {
+            &_content {
+                h3 {
+                    font-size: 20px;
+                    line-height: 1.2;
+                    margin: 25px 0 35px;
+                }
+                p {
+                    font-size: 16px;
+                    margin: 0 0 35px;
+                }
+                .list-image {
+                    padding-top: 30px;
+                    img {
+                        width: 160px;
+                    }
+                }
+            }
+        }
+    }
+}
+@include breakpoint(mdmax) {
+    body{
+        font-size: 14px;
+        line-height: 1rem;
+    }
+    p {
+        margin: 0 0 15px 0;
+    }
+    header {
+        .nav-menu {
+            ul {
+                font-size: 16px;
+                line-height: 1rem;
+            }
+            .logo {
+                padding: 21px 10px;
+                border-top: 4px solid #fff;
+                margin: 0 45px;
+                a {
+                    font-size: 18px;
+                    line-height: 1rem;
+                    margin: 0 0 15px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(smmax) {
+    .banner {
+        background-attachment: fixed;
+        background-size: cover;
+        height: 600px;
+        h1 {
+            font-size: 60px;
+            line-height: 1.2;
+            margin: 0 0 20px;
+        }
+        img {
+            width: 30px;
+        }
+        p {
+            font-size: 22px;
+            line-height: 1.2;
+            margin-bottom: 40px;
+        }
+        .buttons {
+            &__left,
+            &__right {
+                position: relative;
+                padding: 15px;
+                height: 33px;
+                p {
+                    font-size: 20px;
+                    line-height: 1.2;
+                    margin: 0 0 0 20px;
+                }
+            }
+        }
+    }
+}
